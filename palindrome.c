@@ -8,11 +8,13 @@ int main(){
 
 }
 void CheckPalindrome(int Temp){
-    int Num2,sum=0;
+    int Num2,rem,sum=0;
     Num2=Temp;
-  for(i=Temp;i>0;i=Temp/10)
+  while(Temp>0)
   {
-   sum+=i%10;
+   rem=Temp%10;
+   sum=rem+sum*10;
+   Temp=Temp/10;
   }
   if(Num2==sum)
   {
